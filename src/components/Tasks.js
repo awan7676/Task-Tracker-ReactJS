@@ -6,8 +6,8 @@ function Tasks({ tasks, onDelete, onToggle }) {
         <div>
             {
                 tasks.length > 0 ?
-                    tasks.map((task) =>
-                        <Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle} />
+                    tasks.map((task, index) =>
+                        <Task key={index} task={task} onDelete={onDelete} onToggle={onToggle} />
                     ) : <h5><i>Nothing pending...</i></h5>
             }
         </div>
